@@ -22,11 +22,11 @@ img {vertical-align: middle;}
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 10px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -39,27 +39,34 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev, .next {
+  #background-color: rgb(77,77,255);
+  background-color: rgb(255,110,1);
 }
 
 /* Caption text */
 .text {
-  color: #808080;
+  color: #6600cc;
   font-size: 15px;
+  font-style: italic;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  word-wrap: break-word;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  width: 250px;
   text-align: center;
-}
+ }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #808080;
+  color: #0033cc;
   font-size: 12px;
   padding: 8px 12px;
-  position: absolute;
+  text-align: center;
   top: 0;
 }
 
@@ -69,14 +76,19 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  #background-color: #bbb;
+  background-color: #FE9A2E;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+.round {
+  border-radius: 50%;
+}
 
 .active, .dot:hover {
-  background-color: #717171;
+  #background-color: #717171;
+  background-color: #F5DA81;
 }
 
 /* Fading animation */
@@ -85,6 +97,27 @@ img {vertical-align: middle;}
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.bigbox  {
+margin:10px auto;
+width:8px;
+height:8px;
+}
+
+.footer-1 {
+    position: center;
+    height: 22px;
+    text-align: center;
+    font: 10px arial,verdana;
+    padding-left: 15px;
 }
 
 @-webkit-keyframes fade {
@@ -97,108 +130,130 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-.footer-1 {
-    position: center;
-    height: 22px;
-    #background: linear-gradient();
-    text-align: center;
-    font: 10px arial,verdana;
-     padding-left: 15px;
-}
-
-.top-pad {
-  padding-top: 25px;
-}
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev, .next,.text {font-size: 11px; color: #0033cc}
 }
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 12px;}
+}
+
 </style>
 </head>
 <body>
 
 <div class="slideshow-container">
+<div class="bigbox">   </div>
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 12</div>
-  <img src="../Lakehouse/slides/Slide1.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide1.PNG" class="center">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 12</div>
-  <img src="../Lakehouse/slides/Slide2.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide2.PNG" class="center">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 12</div>
-  <img src="../Lakehouse/slides//Slide3.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide3.PNG" class="center"> 
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 12</div>
-  <img src="../Lakehouse/slides//Slide4.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide4.PNG" class="center">  
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">5 / 12</div>
-  <img src="../Lakehouse/slides//Slide5.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide5.PNG" class="center"> 
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">6 / 12</div>
-  <img src="../Lakehouse/slides//Slide6.PNG" style="width:100%" class="top-pad">
- </div>
+  <img src="../Lakehouse/slides/Slide6.PNG" class="center">
+</div>
 
 <div class="mySlides fade">
   <div class="numbertext">7 / 12</div>
-  <img src="../Lakehouse/slides//Slide7.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide7.PNG" class="center">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">8 / 12</div>
-  <img src="../Lakehouse/slides//Slide8.PNG" style="width:100%" class="top-pad">
- </div>
+  <img src="../Lakehouse/slides/Slide8.PNG" class="center">
+</div>
 
 <div class="mySlides fade">
   <div class="numbertext">9 / 12</div>
-  <img src="../Lakehouse/slides//Slide9.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide9.PNG" class="center">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">10 / 12</div>
-  <img src="../Lakehouse/slides//Slide10.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide10.PNG" class="center">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">11 / 12</div>
-  <img src="../Lakehouse/slides//Slide11.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide11.PNG" class="center">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">12 / 12</div>
-  <img src="../Lakehouse/slides//Slide12.PNG" style="width:100%" class="top-pad">
+  <img src="../Lakehouse/slides/Slide12.PNG" class="center">
 </div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<a class="prev" onclick="plusSlides(-1)">&#8249;</a>
+<a class="next" onclick="plusSlides(1)">&#8250;</a>
 
 </div>
-<br>
 
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span>
   <span class="dot" onclick="currentSlide(6)"></span>
   <span class="dot" onclick="currentSlide(7)"></span>
-  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>  
   <span class="dot" onclick="currentSlide(9)"></span>
   <span class="dot" onclick="currentSlide(10)"></span>
   <span class="dot" onclick="currentSlide(11)"></span>
-  <span class="dot" onclick="currentSlide(12)"></span>  
+  <span class="dot" onclick="currentSlide(12)"></span>
 </div>
 
 <script>
@@ -227,11 +282,13 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 </script>
 
 <div class="footer-1">
-        <p><i>Authored by :</i> <a href="https://www.linkedin.com/in/kumar-np" target="_blank"> Kumar N.P <img src="https://npkum.github.io/DDDT/Lakehouse/slides/npk-2.png" alt="gaja" title="gaja" height="22" width="22"> </a></p>
-    </div>
+        <p><i>Authored by:</i> <a href="https://www.linkedin.com/in/kumar-np" target="_blank"> Kumar N.P</a> <img src="https://npkum.github.io/DDDT/Lakehouse/slides/npk-2.png" alt="gaja" title="gaja" height="22" width="22"></p>
+</div>
+
 </body>
 </html> 
